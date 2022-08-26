@@ -42,11 +42,11 @@
       <form class="login-form" >
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label" style="color:#fff ;">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="example@gmail.com" aria-describedby="emailHelp">
+            <input type="email" class="form-control" id="exampleInputEmail1 EMAIL-ADDRESS" placeholder="example@gmail.com" aria-describedby="emailHelp">
             <div id="emailHelp" class="form-text" style="color:#fff ;">We'll never share your email with anyone else.</div>
           </div>
           <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label" style="color:#fff ;">Password</label>
+            <label for="exampleInputPassword1" class="form-label" style="color:#fff ;" id="PASSWORD">Password</label>
             <input type="password" class="form-control" id="exampleInputPassword1" placeholder="*******">
           </div>
           <div class="mb-3 form-check ">
@@ -54,9 +54,9 @@
             <label class="form-check-label" for="exampleCheck1" style="color:#fff ;">Remember me</label>
           </div>
           <div style="color: #fff;">
-            <p>Don't have an account? <a href="register.html" style="text-decoration: none;" class="Reigster-show">Reigster here</a></p>
+            <p>Don't have an account? <a href="register.html" style="text-decoration: none;" class="Reigster-show" id="REGISTER">Reigster here</a></p>
           </div>
-          <button type="submit" class="btn btn-primary"><a href="home.html" > Submit</a></button>
+          <button type="submit" class="btn btn-primary "><a href="home.html"  style="color: #fff; text-decoration: none;" id="SUBMIT" onclick="validate()"> Submit</a></button>
       </form>
       </div>
     </div>
@@ -69,12 +69,7 @@
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" 
         crossorigin="anonymous">
   </script>
-  <script>
-    $('.Reigster-show').click(function(){
-      $('.login-form').show();
-      $('.Reigster-form').hide()
-      
-    })
-  </script>
+
+  <script src="INDEX.js"> </script>
 </body>
 </html>
