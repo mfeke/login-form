@@ -1,3 +1,40 @@
+function cheackData() {
+    let enterUsername = document.getElementById("signupUsername").value;
+    let enterPassword = document.getElementById("signupPassword").value;
+
+    var getUsername = localStorage.getItem("userName");
+    var getPassword = localStorage.getItem("password");
+    if (enterUsername ===getUsername )  {
+
+        if(enterPassword === getPassword){
+            alert("Loagin Successful");
+
+        } else{
+            alert("Wrong password");
+        }
+
+
+    }else {
+        alert("Invaild datails ");
+    }
+
+    
+}
+
+function addData() {
+    let username = document.getElementById("signupUsername").value;
+    let email = document.getElementById("signupEmailAddress").value;
+    let password = document.getElementById("signupPassword").value;
+    let confirmPassword = document.getElementById("signupCofirmPassword").value;
+
+    localStorage.setItem("userName", username);
+    localStorage.setItem("emailAddress", email);
+    localStorage.setItem("password", password);
+    localStorage.setItem("confirm", confirmPassword);
+
+    console.log(addData)
+}
+
 function setFormMessage(formElement, type, message) {
     const messageElement = formElement.querySelector(".form__message");
 
@@ -43,6 +80,18 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".form__input").forEach(inputElement => {
         inputElement.addEventListener("blur", e => {
             if (e.target.id === "signupUsername" && e.target.value.length > 0 && e.target.value.length < 5) {
+                setInputError(inputElement, "Username must be at least 5 characters in length");
+            }
+        });
+
+        inputElement.addEventListener("input", e => {
+            clearInputError(inputElement);
+        });
+    });
+    
+    document.querySelectorAll(".form__input").forEach(inputElement => {
+        inputElement.addEventListener("blur", e => {
+            if (e.target.id === "signupEmailAddress" && e.target.value.length > 0  && e.target.value.length < 5) {
                 setInputError(inputElement, "Username must be at least 5 characters in length");
             }
         });
