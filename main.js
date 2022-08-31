@@ -4,17 +4,19 @@ function cheackData() {
 
     var getUsername = localStorage.getItem("userName");
     var getPassword = localStorage.getItem("password");
-    if (enterUsername !==getUsername && enterPassword !== getPassword )  {
-        alert("Wrong password" && "Invaild datails ");
-
+    if (enterUsername ==getUsername && enterPassword == getPassword )  {
+        alert("Login Successful");
      } else{
           
-            alert("Login Successful");
+            
+            alert("Wrong password" && "Invaild datails ");
+
      } 
         
 
 
 }
+
 function addData() {
     let username = document.getElementById("signupUsername").value;
     let email = document.getElementById("signupEmailAddress").value;
@@ -26,7 +28,7 @@ function addData() {
     localStorage.setItem("password", password);
     localStorage.setItem("confirm", confirmPassword);
 
-    alert("Login Successful")
+    alert("Signup Successful"+" "+ username)
 
 
 
