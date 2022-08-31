@@ -1,3 +1,5 @@
+
+
 body {
     --color-primary: #009579;
     --color-primary-dark: #007f67;
@@ -10,7 +12,7 @@ body {
 }
 
 
-.main {
+body {
     
     margin: 0;
     height: 100vh;
@@ -19,7 +21,7 @@ body {
     justify-content: center;
     font-size: 18px;
     background: url(image/backgrund.jpg);
-    background-attachment: fixed;
+    background-attachment:fixed; 
     background-size: cover;
 
 }

@@ -4,23 +4,17 @@ function cheackData() {
 
     var getUsername = localStorage.getItem("userName");
     var getPassword = localStorage.getItem("password");
-    if (enterUsername ===getUsername )  {
+    if (enterUsername !==getUsername && enterPassword !== getPassword )  {
+        alert("Wrong password" && "Invaild datails ");
 
-        if(enterPassword === getPassword){
-            alert("Loagin Successful");
+     } else{
+          
+            alert("Login Successful");
+     } 
+        
 
-        } else{
-            alert("Wrong password");
-        }
 
-
-    }else {
-        alert("Invaild datails ");
-    }
-
-    
 }
-
 function addData() {
     let username = document.getElementById("signupUsername").value;
     let email = document.getElementById("signupEmailAddress").value;
@@ -31,6 +25,10 @@ function addData() {
     localStorage.setItem("emailAddress", email);
     localStorage.setItem("password", password);
     localStorage.setItem("confirm", confirmPassword);
+
+    alert("Login Successful")
+
+
 
     console.log(addData)
 }
@@ -69,13 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
         createAccountForm.classList.add("form--hidden");
     });
 
-    loginForm.addEventListener("submit", e => {
-        e.preventDefault();
-
-        // Perform your AJAX/Fetch login
-
-        setFormMessage(loginForm, "error", "Invalid username/password combination");
-    });
+ 
 
     document.querySelectorAll(".form__input").forEach(inputElement => {
         inputElement.addEventListener("blur", e => {
